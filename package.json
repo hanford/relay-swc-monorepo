@@ -1,0 +1,47 @@
+{
+  "name": "relay-compiler-ci",
+  "version": "1.0.0",
+  "scripts": {
+    "relay": "mkdir -p types && relay-compiler",
+    "watcher": "npm-watch relay",
+    "dev": "pnpm relay && pnpm dev --filter ./apps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-watch": "^0.11.0",
+    "relay-compiler": "^13.0.1"
+  },
+  "relay": {
+    "src": "./",
+    "artifactDirectory": "./types/",
+    "schema": "./apps/backend/schema/__generated__/main.graphql",
+    "exclude": [
+      "**/node_modules/**/*",
+      "**/apps/backend/**/*"
+    ],
+    "language": "typescript",
+    "noFutureProofEnums": true,
+    "customScalars": {
+      "NonEmptyString": "string",
+      "EntityId": "EntityId",
+      "UnixTimestamp": "Int",
+      "DateTime": "DateString",
+      "Date": "DateString",
+      "Time": "string"
+    }
+  },
+  "watch": {
+    "relay": {
+      "patterns": [
+        "apps/weaver/schemas/__generated__/main.graphql",
+        "apps/frontend/components/**/*",
+        "apps/frontend/pages/**/*",
+        "packages/ui/pages/**/*",
+        "packages/ui/components/**/*"
+      ],
+      "extensions": "tsx,ts,js,jsx"
+    }
+  }
+}

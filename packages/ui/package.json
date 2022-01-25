@@ -1,0 +1,36 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "start": "next start"
+  },
+  "exports": {
+    "./": "./components/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^17.0.38",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-relay": "^13.0.1",
+    "relay-runtime": "^13.0.1",
+    "relay-test-utils": "^13.0.1",
+    "typescript": "^4.5.4"
+  },
+  "why-typesVersions": [
+    "typesVersions helps us get around typescript not understanding package.json#exports",
+    "https://github.com/microsoft/TypeScript/issues/33079"
+  ],
+  "typesVersions": {
+    "*": {
+      "Name": [
+        "./components/Name.tsx"
+      ]
+    }
+  }
+}

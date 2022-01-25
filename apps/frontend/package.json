@@ -1,0 +1,43 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^17.0.38",
+    "babel-plugin-relay": "^13.0.1",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-relay": "^13.0.1",
+    "relay-runtime": "^13.0.1",
+    "relay-test-utils": "^13.0.1",
+    "typescript": "^4.5.4",
+    "ui": "workspace:*"
+  },
+  "relay": {
+    "src": "../",
+    "artifactDirectory": "../../types/",
+    "schema": "../backend/schema/__generated__/main.graphql",
+    "exclude": [
+      "**/node_modules/**/*",
+      "**/apps/backend/**/*"
+    ],
+    "language": "typescript",
+    "noFutureProofEnums": true,
+    "customScalars": {
+      "NonEmptyString": "string",
+      "EntityId": "EntityId",
+      "UnixTimestamp": "Int",
+      "DateTime": "DateString",
+      "Date": "DateString",
+      "Time": "string"
+    }
+  }
+}
