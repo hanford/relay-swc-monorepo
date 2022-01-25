@@ -22,7 +22,7 @@
     "ui": "workspace:*"
   },
   "relay": {
-    "src": "../",
+    "src": "../../",
     "artifactDirectory": "../../types/",
     "schema": "../backend/schema/__generated__/main.graphql",
     "exclude": [
