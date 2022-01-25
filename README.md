@@ -1,6 +1,6 @@
 This application is pretty close representation of a large, multi app, PNPM workspace that I work in.
 
-We have many Next.js applications all using Relay, and we've separated our shared components into their own package, `./packages/ui`. We then utilize `pnpm` to link everything up, and use these components in our `./apps`.
+We have many Next.js applications using Relay, and we've separated our shared components into their own package, `./packages/ui`. We then utilize `pnpm` to link everything up and use these components in our `./apps`.
 
 ---
 
