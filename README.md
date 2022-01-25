@@ -7,10 +7,10 @@ We have many Next.js applications all using Relay, and we've separated our share
 This structure works fine with `babel-plugin-relay` but seems to break with the SWC Relay plugin:
 
 With Babel:
-![preview](https://github.com/hanford/relay-swc-monorepo/blob/master/babel.png)
+![preview](https://github.com/hanford/relay-swc-monorepo/blob/main/babel.png)
 
 With SWC:
-![preview](https://github.com/hanford/relay-swc-monorepo/blob/master/babel.png)
+![preview](https://github.com/hanford/relay-swc-monorepo/blob/main/swc.png)
 
 ---
 
