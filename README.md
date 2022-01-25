@@ -23,9 +23,9 @@ pnpm dev
 
 To reproduce the bug, use a locally built version of SWC from [this PR](https://github.com/vercel/next.js/pull/33240#issuecomment-1021244329)
 
-Link `@next/swc` in `apps/frontend/*` (yarn link works, didn't try PNPM's equivelant)
+yarn link `@next/swc` in `apps/frontend/*` (didn't try PNPM's equivelant)
 
-Rename `./apps/frontend/babel.config.js` -> `./apps/frontend/babel.config.js`
+Rename `./apps/frontend/babel.config.js` -> `./apps/frontend/babel1.config.js`
 
 Finally run `pnpm dev`
 
